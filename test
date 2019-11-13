@@ -178,8 +178,11 @@
                     <div id="logo">
                         <a href="{LINK_INDEX}"><img src="{SITE_URL}storage/logo/{SITE_LOGO}" alt=""></a>
                     </div>
+
+
+
                     <!-- Mobile Navigation -->
-                    <button class="btn btn-primary hidden" id="change-city" data-toggle="modal" data-target="#countryModal">{LANG_SELECT_CITY}</span></button>
+                    <button class="btn btn-primaryy hidden" id="change-city" data-toggle="modal" data-target="#countryModal">{LANG_SELECT_CITY}</span></button>
                     IF("{COUNTRY_TYPE}"=="multi"){
                     <div class="mmenu-trigger" id="#selectCountry" data-toggle="modal" data-target="#selectCountry">
                         <button class="hamburger hamburger--collapse country-flag">
@@ -215,14 +218,13 @@
                 <div class="right-side">
                     <div class="header-widget">
                         IF("{LOGGED_IN}&{WCHAT}"=="1&on"){
-                        <a href="{LINK_MESSAGE}" class="sign-in popup-with-zoom-anim hidden-xs"><i class="fa fa-envelope"></i> <span class="hidden-xs">{LANG_MESSAGE}</span></a>
+                        <a href="{LINK_MESSAGE}" class="sign-in popup-with-zoom-anim"><i class="fa fa-envelope"></i> <span class="hidden-xs">{LANG_MESSAGE}</span></a>
                         {:IF}
                         IF("{LOGGED_IN}"=="1"){
                         <!-- User Menu -->
                         <div class="user-menu">
                             <div class="user-name"><span><img src="{SITE_URL}storage/profile/{USERPIC}" alt="{USERNAME}"></span>{USERNAME}</div>
                             <ul>
-							    <li><a href="{LINK_POST-AD}" ><i class="fa fa-plus-circle"></i> {LANG_POST_FREE_AD} </a></li>
                                 <li><a href="{LINK_DASHBOARD}"><i class="fa fa-home"></i> {LANG_DASHBOARD}</a></li>
                                 <li><a href="{LINK_MYADS}"><i class="fa fa-book"></i> {LANG_MY_ADS}</a></li>
                                 <li><a href="{LINK_PROFILE}/{USERNAME}"><i class="fa fa-user"></i> {LANG_MY_PROFILE}</a></li>
@@ -235,11 +237,9 @@
                         {:IF}
                         IF("{LOGGED_IN}"=="0"){
                         <a href="#loginPopUp" class="sign-in popup-with-zoom-anim modal-trigger"><i class="fa fa-sign-in"></i> {LANG_LOGIN}</a>
-
                         <a href="{LINK_SIGNUP}" class="sign-in popup-with-zoom-anim"> {LANG_REGISTER}</a>
-
                         {:IF}
-                        <a href="{LINK_POST-AD}" class="hidden-xs button border with-icon">{LANG_POST_FREE_AD} <i class="fa fa-plus-circle"></i></a>
+                        <a href="{LINK_POST-AD}" class="button border with-icon hidden-xs hidden-sm">{LANG_POST_FREE_AD} <i class="fa fa-plus-circle"></i></a>
                         <!-- lang-dropdown -->
                         IF("{LANG_SEL}"=="1"){
                         <div class="dropdown lang-dropdown" id="lang-dropdown">
@@ -310,8 +310,8 @@
                             {:IF}
                             <div class="locationrequest smallBox br5 col-sm-4">
                                 <div class="rel input-container"><span class="watermark_container" style="display: block;">
-                                <input class="light cityfield ca2" type="text" id="inputStateCity" placeholder="{LANG_TYPE_YOUR_CITY}">
-                                </span>
+                    <input class="light cityfield ca2" type="text" id="inputStateCity" placeholder="{LANG_TYPE_YOUR_CITY}">
+                    </span>
                                     <label for="inputStateCity" class="icon locmarker2 abs"><i class="fa fa-map-marker"></i></label>
 
                                     <div id="searchDisplay"></div>
@@ -406,6 +406,9 @@
                     </div>
                     <div class="text-center"><a href="{LINK_LOGIN}?fstart=1">{LANG_FORGOTPASS}?</a></div>
                     <button id="login" href="#" class="btn field-block">{LANG_LOGIN}</button>
+                    <div class="login-cta text-center">
+                        <p>{LANG_FORGOTPASS}?</p>
+                        <a href="{LINK_SIGNUP}">{LANG_CREATE_NEW_ACCOUNT}</a></div>
                 </form>
             </div>
         </div>
